@@ -95,3 +95,69 @@ async function fetchData() {
   }
 }
 
+// declaramos
+let translateFromCode
+let translateToCode
+
+function addOptionsToSelects(languages) {
+  languages.forEach(element => {
+    $('#textSelect').innerHTML += `<option value="${element.code}">${element.name}</option>`;
+    $('#translateSelect').innerHTML += `<option value="${element.code}">${element.name}</option>`;
+    });
+
+    console.log($('#textSelect').value);
+
+    $('#textSelect').addEventListener('click', () => {
+      // actializamos el valor
+      translateFromCode = $('#textSelect').value
+      console.log(translateFromCode);
+    })
+
+    $('#translateSelect').addEventListener('click', () => {
+      // actializamos el valor
+      translateToCode = $('#translateSelect').value
+      console.log(translateToCode);
+    })
+}
+
+fetchData();
+
+$('#textSelect').addEventListener('click', () => {
+  console.log($('#textSelect').value);
+  initTextSelect = $('#textSelect').value;
+});
+
+$('#translateSelect').addEventListener('click', () => {
+  console.log($('#translateSelect').value);
+  TranslateTextSelect = $('#translateSelect').value;
+});
+
+$('#btn').addEventListener('click', async () => {
+  let textToTranslate = $('#textInput').value;  // Obtiene correctamente el texto a traducir del campo de entrada
+
+  const encodedParams = new URLSearchParams();
+  encodedParams.append("source_language", translateFromCode);
+  encodedParams.append("target_language", translateToCode);
+  encodedParams.append("text", textToTranslate);
+
+  const options = {
+    method: 'POST',
+    headers: {
+      'content-type': 'application/x-www-form-urlencoded',
+      'X-RapidAPI-Key': '9ed367b64amsh301c82186b38cccp158a21jsn82a5a9a0bbc9',
+      'X-RapidAPI-Host': 'text-translator2.p.rapidapi.com'
+    },
+    body: encodedParams
+  };
+
+  fetch(url, options)
+    .then(response => response.json())
+    // lo imprimimos en pantalla
+    .then(response => {
+      $('#textResolved').value = response.data.translatedText
+    })
+    .catch(err => console.error('Error:', err));
+});
+
+
+// los console.log de laslineas 112 y 118 se repiten 
