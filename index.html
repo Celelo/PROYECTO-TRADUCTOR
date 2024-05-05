@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,51 +10,52 @@
     <script src="https://kit.fontawesome.com/d47b1f1b61.js" crossorigin="anonymous"></script>
     <title>Traductor</title>
 </head>
-<body>
-    <!-- INIT HEADER -->
-    <header class="flex w-92  border border-green items-center shadow-xl">
-        <div class="flex p-5 items-center grow">
-            <i class="fa-solid fa-language text-3xl text-blue-900 cursor-pointer p-2 hover:bg-zinc-300 transition rounded-full"></i>
 
-            <h1 class="text-2xl font-sans pr-1 pl-2 text-blue-900 cursor-pointer">
-                Traduce 
+<body class="bg-slate-600">
+    <!-- INIT HEADER -->
+    <header class="flex justify-between items-center p-5 bg-gray-100 text-blue-900 shadow-xl">
+        <div class="flex items-center">
+            <i class="fas fa-language text-3xl cursor-pointer p-2 hover:bg-gray-300 transition rounded-full"></i>
+
+            <h1 class="text-2xl font-sans pr-1 pl-2 cursor-pointer">
+                Traduce
             </h1>
             <h1 class="text-2xl font-sans text-slate-600 cursor-pointer">
                 Fácil
             </h1>
         </div>
 
-        <div class="flex p-5 items-center">
-            <i class="fa-solid fa-ellipsis-vertical text-xl p-2 px-4 hover:bg-zinc-300 transition rounded-full ml-5 cursor-pointer"></i>
-            <i class="fa-regular fa-user  p-2 bg-zinc-300 rounded-full ml-5 cursor-pointer"></i>
+        <div class="flex items-center">
+            <i class="fas fa-ellipsis-vertical text-xl p-2 px-4 hover:bg-gray-300 transition rounded-full cursor-pointer"></i>
+            <i class="far fa-user p-2 bg-gray-300 rounded-full cursor-pointer"></i>
         </div>
 
     </header>
     <!-- END HEADER -->
 
     <!-- INIT MAIN -->
-    <main class="p-5 bg-slate-600">
-        <div class="flex justify-center justify-between">
-            <div class="flex">
-                <h2 class=" text-white">DE:</h2>
-            <select id="textSelect" class="w-28 ml-2">
-                <option value="es">Español</option>
-            </select>
+    <main class="p-5">
+        <div class="flex flex-col md:flex-row justify-between">
+            <div class="flex flex-col md:flex-row items-center mb-4 md:mb-0">
+                <h2 class="text-white md:mr-2">DE:</h2>
+                <select id="textSelect" class="w-full md:w-28">
+                    <option value="es">Español</option>
+                </select>
             </div>
-            <i class="fa-solid fa-arrows-turn-to-dots text-white text-2xl"></i>
-            <button id="btn" class="p-2 bg-slate-200">Traduccir</button>
-            <div class="flex pr-9">
-                <h3 class=" text-white">A:</h3>
-            <select id="translateSelect" class="w-28 ml-2"></select>
+            <button id="btn" class="p-2 bg-gray-200 rounded-lg">Traducir</button>
+            <div class="flex flex-col md:flex-row items-center">
+                <h3 class="text-white md:mr-2">A:</h3>
+                <select id="translateSelect" class="w-full md:w-28"></select>
             </div>
         </div>
-        <div class="flex mt-9 px-7">
-            <textarea id="textInput" class="w-[620px] h-40 border border-green text-start text-2xl border-no resize-none"></textarea>
-            <textarea id="textResolved" placeholder="Traduccion" class="w-[620px] h-40 border ml-2 bg-slate-200 border-green text-start text-2xl items-start resize-none"></textarea>
-        </div>        
+        <div class="flex flex-col md:flex-row mt-9">
+            <textarea id="textInput" class="w-full mr-3 md:w-1/2 h-40 border border-green text-2xl border-no-resize"></textarea>
+            <textarea id="textResolved" placeholder="traducción" class="w-full md:w-1/2 h-40 border mt-2 md:mt-0 bg-gray-200 border-green text-2xl resize-none"></textarea>
+        </div>
     </main>
     <!-- END MAIN -->
 
     <script src="JavaScript/script.js"></script>
 </body>
+
 </html>
