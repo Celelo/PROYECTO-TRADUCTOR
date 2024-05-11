@@ -1,9 +1,10 @@
 
+
 **¡Bienvenidxs a mi aplicación web "Traduce Fácil"!** 
 
 *En esta aplicación podrás traducir cualquier texto en 111 idiomas.*
 
-[Link de la página]([https://develop--bright-sawine-31fb78.netlify.app/](https://celelo.github.io/PROYECTO-TRADUCTOR/)](https://celelo.github.io/PROYECTO-TRADUCTOR/)) ✨
+[Link de la página](https://celelo.github.io/PROYECTO-TRADUCTOR/) ✨
 
 ![pagina principal](/images/1.png)
 
@@ -20,6 +21,17 @@
 ![traducion](/images/4.png)
 
 
+### Desarrolladora:
+
+*Celeste López✨* [LinkedIn](https://www.linkedin.com/in/celeste-l%C3%B3pez-879a03298/)
+
+
+### Tecnologías usadas:
+- [x] HTML5
+- [x] CSS3
+- [x] JavaScript
+- [x] Tailwind CSS
+- [x] SuperAPI
 ### Desarrolladora:
 
 *Celeste López✨* [LinkedIn](https://www.linkedin.com/in/celeste-l%C3%B3pez-879a03298/)
