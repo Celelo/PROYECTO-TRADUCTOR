@@ -16,7 +16,7 @@
 
 ![selecion de traduccion](/images/3.png)
 
-*luego apretar el boton "traducir" *
+*escribir el texto y luego apretar el boton "traducir" *
 
 ![traducion](/images/4.png)
 
@@ -34,12 +34,3 @@
 - [x] SuperAPI
 ### Desarrolladora:
 
-*Celeste López✨* [LinkedIn](https://www.linkedin.com/in/celeste-l%C3%B3pez-879a03298/)
-
-
-### Tecnologías usadas:
-- [x] HTML5
-- [x] CSS3
-- [x] JavaScript
-- [x] Tailwind CSS
-- [x] SuperAPI
