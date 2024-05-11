@@ -32,5 +32,5 @@
 - [x] JavaScript
 - [x] Tailwind CSS
 - [x] SuperAPI
-### Desarrolladora:
+
 
